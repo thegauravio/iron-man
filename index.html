@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Iron Man AR Mask</title>
+  <link rel="stylesheet" href="style.css" />
+  <!-- MediaPipe FaceMesh -->
+  <script src="https://cdn.jsdelivr.net/npm/@mediapipe/face_mesh@0.4.1633559619/face_mesh.min.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/@mediapipe/camera_utils@0.4.1633559619/camera_utils.js" defer></script>
+</head>
+<body>
+  <div id="app">
+    <video id="inputVideo" autoplay muted playsinline></video>
+    <canvas id="overlay"></canvas>
+    <button id="toggleMask">Open/Close Faceplate</button>
+  </div>
+  <script src="script.js" defer></script>
+</body>
+</html>
