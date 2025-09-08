@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <title>AR Iron Man Mask</title>
+    <meta name="description" content="Augmented reality Iron Man mask overlay using MediaPipe FaceMesh.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./styles.css">
+  </head>
+  <body>
+    <div id="app" class="app">
+      <header class="app__header">
+        <h1 class="app__title">IRON MASK AR</h1>
+        <div class="controls">
+          <button id="toggleFaceplateBtn" class="btn">Toggle Faceplate</button>
+          <label class="slider">
+            <span>Faceplate</span>
+            <input id="faceplateRange" type="range" min="0" max="100" value="0">
+          </label>
+        </div>
+      </header>
+
+      <main class="stage">
+        <div class="stage__video-wrapper mirror" id="stageWrapper">
+          <video id="video" class="stage__video" autoplay playsinline muted></video>
+          <canvas id="overlay" class="stage__overlay"></canvas>
+        </div>
+        <div id="status" class="status">Initializing camera…</div>
+      </main>
+
+      <footer class="app__footer">
+        <span>Powered by MediaPipe FaceMesh</span>
+      </footer>
+    </div>
+
+    <!-- MediaPipe CDN (pinned versions) -->
+    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/face_mesh@0.4.1633559619/face_mesh.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/drawing_utils@0.3.1620248252/drawing_utils.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/camera_utils@0.3.1620248252/camera_utils.min.js"></script>
+
+    <script src="./main.js"></script>
+  </body>
+  </html>
+
