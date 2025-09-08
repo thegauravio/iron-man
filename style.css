@@ -1,0 +1,45 @@
+/* Iron Man AR Mask Styles */
+body {
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #111;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+#app {
+  position: relative;
+}
+
+#inputVideo {
+  border-radius: 8px;
+  transform: scaleX(-1); /* mirror */
+}
+
+#overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  transform: scaleX(-1); /* mirror to match video */
+}
+
+#toggleMask {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: linear-gradient(45deg, #b10404, #e21919);
+  border: 2px solid #d4af37;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 25px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+#toggleMask:hover {
+  background: linear-gradient(45deg, #e21919, #b10404);
+}
