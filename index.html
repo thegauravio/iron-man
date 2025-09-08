@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iron Man AR Face Mask</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/camera_utils/camera_utils.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/control_utils/control_utils.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/drawing_utils/drawing_utils.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/face_mesh/face_mesh.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Iron Man AR Face Mask</h1>
+            <p>Experience the power of Tony Stark's helmet with real-time AR</p>
+        </div>
+        
+        <div class="video-container">
+            <video id="video" autoplay muted playsinline></video>
+            <canvas id="canvas"></canvas>
+            <canvas id="mask-canvas"></canvas>
+        </div>
+        
+        <div class="controls">
+            <button id="toggle-camera" class="btn btn-primary">Start Camera</button>
+            <button id="toggle-mask" class="btn btn-secondary" disabled>Toggle Mask</button>
+            <button id="toggle-faceplate" class="btn btn-accent" disabled>Open/Close Faceplate</button>
+        </div>
+        
+        <div class="status">
+            <div id="status-text">Click "Start Camera" to begin</div>
+            <div id="fps-counter">FPS: 0</div>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
