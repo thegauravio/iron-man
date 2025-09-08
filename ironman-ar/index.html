@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Iron Man AR Mask</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="app-header">
+    <h1>Iron Man AR</h1>
+    <div class="controls">
+      <button id="toggleFaceplate" aria-pressed="false" title="Toggle Faceplate (f)">Open Faceplate</button>
+      <select id="cameraSelect" title="Select camera"></select>
+    </div>
+  </header>
+  <main class="stage">
+    <video id="video" playsinline autoplay muted></video>
+    <canvas id="overlay"></canvas>
+  </main>
+  <footer class="app-footer">
+    <span class="hint">Tip: press <kbd>F</kbd> to toggle faceplate</span>
+  </footer>
+  <script type="module" src="main.js"></script>
+</body>
+</html>
